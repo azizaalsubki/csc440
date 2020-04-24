@@ -1,0 +1,51 @@
+<html><head>
+        <!-- The title shows up in the browser toolbar -->
+        <title>Meme Page </title>
+       
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <div class="ftext">
+            <h1>  
+                Hello
+                <span id="result"></span> to my website 
+                <span style="white-space: pre-line"></span>
+                our interests are matches 
+                <span id="matches"></span> 
+                I am also intrested in { <span id="intre"></span> }
+                here is a meme:<img src="2020-is-gonna-be-my-year-world-war-3-is-trending-on-the-2nd-day-joey-friends.jpg" alt=“Memes” width="500" height="300" style="vertical-align:top">
+                <script>
+                document.getElementById("result").innerHTML=localStorage.getItem("textvalue");
+                document.getElementById("matches").innerHTML=localStorage.getItem("percentage")+"%";
+                document.getElementById("intre").innerHTML=localStorage.getItem("match_in");
+    
+                
+                </script>
+                </h1>
+                </div>
+                
+               
+            
+                <style>
+                    /* body tag selector: define a default font. Never use Comic Sans. */
+                    body
+                    {
+                        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRShEZfhHzDbaNYj2r_dKWXaIPnJO2zff0vtJB25qrhr_7bVQZS&usqp=CAU");
+                    }
+                    #photo { float: right; }
+     .ftext {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+     transform: translate(-50%, -50%); 
+    color:purple;
+    font-family: "Comic Sans MS";
+  }
+
+
+
+	</style>
+        </style>
+    </body>

@@ -1,116 +1,144 @@
 <html><head>
 	<!-- The title shows up in the browser toolbar -->
-	<title>Dog's Homepage</title>
+	<title>Welcome to My website </title>
+	
+	<!-- <script src="script.js"></script> -->
+
+	<script>
+			function radio_input()
+			{
+				
+				var acting = 0
+				var singing = 0
+				var styling = 0
+				var catering = 0
+				var jokes = 0	
+				var science = 0
+				var percent = 0
+				var intrested = ""
+				// Re-direct the browser to the url value
+				if (document.getElementById("Aziza").checked){
+					if(document.getElementById("acting").checked){
+						acting = 33.33
+						intrested +=" acting "
+					}
+					if(document.getElementById("singing").checked){
+						singing = 33.33
+						intrested +=" singing "
+					}
+					if(document.getElementById("styling").checked){
+						styling = 33.33
+						intrested +=" styling "
+					}
+					if(document.getElementById("catering").checked){
+						catering = 0
+
+					}
+					if(document.getElementById("telling jokes").checked){
+						jokes = 0
+
+					}
+					if(document.getElementById("science").checked){
+						science = 0
+
+					}
+					
+					
+					
+					percent = acting + singing + styling 
+						localStorage.setItem("percentage", percent);
+						localStorage.setItem("match_in", intrested);
+						window.location.href = "AzizaPage.html"
+				}
+
+				else if (document.getElementById("memes").checked) {
+					if(document.getElementById("acting").checked){
+						acting = 33.33
+						intrested +=" acting "
+					}
+					if(document.getElementById("singing").checked){
+						singing = 33.33
+						intrested +=" singing "
+					}
+					if(document.getElementById("styling").checked){
+						styling = 33.33
+						intrested +=" styling "
+					}
+					if(document.getElementById("catering").checked){
+						catering = 0
+
+					}
+					if(document.getElementById("telling jokes").checked){
+						jokes = 0
+
+					}
+					if(document.getElementById("science").checked){
+						science = 0
+
+					}
+					percent = acting + singing + styling 
+						localStorage.setItem("percentage", percent);
+						localStorage.setItem("match_in", intrested);
+						window.location.href = "memes1Page.html"
+						
+				}
+					
+
+			}
+
+
+
+
+			
+			function passvalues() {
+				var fullname= document.getElementById("fullname").value;
+				localStorage.setItem("textvalue", fullname);
+				return false;
+			}
+
+	</script>
+
+
 </head>
 
 <body>
 	<!--A header for the page-->
-	<h1>Dog D. Dog</h1>
 
-	<!--My photo-->
-	<img id="photo" src="http://i.imgur.com/L34Fib6.jpg">	
-
-	<!--Divs and spans can be used to logically and structurally organize your page
-		Here we use divs to separate different sections of the page: about, courses, interests and pet information
-		* divs are block elements and are separated by newlines or breaks in the page
-		* spans are inline elements and are displayed without newlines between them
-	-->
-
-	<!--Each div (and any other tag) can have a class and id.
-		The class can be shared with other tags.
-		The id is unique to this tag.
-		The class and id can be selected by CSS rules to style groups of elements differently.
-	-->
-	<div class="section" id="about">
-		<!--An h2 header - smaller than the h1 header-->
-		<h2>About</h2>
-
-		<!--<p> tags are paragraphs have newlines before and after them-->
-		<p>Woof woof!</p>
-		<!--The <a> tag is a link.
-			The text between the <a> and </a> tags is the displayed text.
-			The href attribute has the link's target URL.-->
-		<p>Hi, I'm Dog. I love <a href="http://en.wikipedia.org/wiki/User_interface_design">User Interface Design</a>.</p>		
+	<div class="background-image">
+		<div class="ftext">
+	<h1> Welcome to Aziza's website! </h1>
+		
+		</div>
 	</div>
 
-	<div class="section" id="courses">
-		<h2>Courses</h2>
-		<p>Here are some courses I've taken:</p>
+	<div class="section" id="homepage">
+		<h2>Please fill in the following form</h2>
 
-		<!--Tables can be used to group text or images into rows and columns-->
-		<table>
-			<!--Each <tr> is a row-->
-			<tbody><tr>
-				<!--Each <th> or <td> is a cell.
-					The number of cells in a row determines the number of columns in the table.
-				-->
-				<th>Course Number</th>
-				<th>Course Title</th>
-				<th>Semester Taken</th>
-			</tr>
-			<tr>
-				<!--A <td> or cell can span multiple columns using the colspan attribute-->
-				<td class="enrollheader" colspan="3">For Credit</td>
-			</tr>
-			<!--We give certain rows the "currentlytaking" class, so we can color them differently in a CSS rule-->
-			<tr class="currentlytaking">
-				<td><a href="http://stellar.mit.edu/S/course/6/sp14/6.813/index.html">6.813</a></td>
-				<td>User Interface Design</td>
-				<td>Spring 2014</td>
-			</tr>			
-			<tr>
-				<td><a href="http://ai6034.mit.edu/fall12/index.php?title=Main_Page">6.034</a></td>
-				<td>Artificial Intelligence</td>
-				<td>Fall 2013</td>
-			</tr>
-			<tr>
-				<td><a href="http://stellar.mit.edu/S/course/6/fa13/6.006/">6.006</a></td>
-				<td>Introduction to Algorithms</td>
-				<td>Fall 2013</td>
-			</tr>
-			<tr>
-				<td class="enrollheader" colspan="3">Listener</td>
-			</tr>
-			<tr>
-				<td><a href="http://stellar.mit.edu/S/course/6/fa13/6.867/">6.867</a></td>
-				<td>Machine Learning</td>
-				<td>Fall 2013</td>
-			</tr>
-			<tr>
-				<td><a href="http://db.csail.mit.edu/6.830/index.php">6.830</a></td>
-				<td>Database Systems</td>
-				<td>Fall 2012</td>
-			</tr>
-		</tbody></table>
+
+			<body>
+				<form method="GET" action="JavaScript:radio_input()"> 
+					<div class="fortext">
+					Full Name: <input type="text" name="fullname" id="fullname"><br>	
+					Interest: <br>
+					<input type="checkbox" id="acting" name="acting"> Acting <br>
+					<input type="checkbox" id="singing" name="singing"> Singing<br>
+					<input type="checkbox" id="catering" name="catering"> Catering<br>
+					<input type="checkbox" id="styling" name="styling"> Styling <br>
+					<input type="checkbox" id="telling jokes" name="telling jokes"> Telling jokes<br>
+					<input type="checkbox" id="science" name="science"> Science<br>
+					What Would you like to see: <br>
+					<input type="radio" id="Aziza" name="What Would you like to see" value="azizacv" > Aziza's CV<br>
+				     <input type="radio" id="memes" name="What Would you like to see" value="memes" > Memes <br>
+					<input type="submit" value="Submit" onclick="passvalues(); " /> 
+					<!-- <button id="NextButton"> Start </button>		 -->
+					</div>
+				</form>
+			</body>
+
 	</div>
 
-	<div class="section" id="interests">
-		<h2>Interests</h2>
-		<!--Spans are displayed inline, but allow you to identify text in CSS rules-->
-		I am interested <span class="serious">HCI</span>, <span class="silly">memes</span>, and <span class="silly">youtube videos</span>.
-	</div>
 
-	<div class="section" id="petinfo">
-		<h2>Submit Pet Information</h2>
-		<p>Would love to know what kinds of pets you 'own' (you'll never own me). Submit below!</p>
 
-		<!--A form allows the user/client to input information			
-			The 'action' attribute of the <form> is where the information should be sent when the user submits it.
-			Here a Python script on the 6.831 server just prints the submitted form information.-->
-		<form action="http://courses.csail.mit.edu/6.831/2013/handouts/lab1-html-css/reply.py" method="post">
-			<!--The form contains several <input> elements which receive info from the user.
-			Each <input> element has a 'type' attribute, which determines if it's a textbox, radio button, etc.-->
-			<label for="petname">Name:</label>
-			<input id="petname" type="text" name="petname"><br>
-			<label for="phylum">Phylum:</label>
-			<input id="phylum" type="text" name="phylum"><br>
-			<label for="gender">Gender:</label>
-			<input id="gender" type="text" name="gender"><br>
-
-			<!--The submit-type input is a button that sends the information as name:value pairs to the form's 'action'-->
-		  	<input type="submit" value="Submit">
-		</form>
-	</div>
 
 
 	<!--This is the style section.
@@ -124,70 +152,49 @@
 		/* .section class selector: set the font of all tags with class="section" */
 		.section {
 			font-family: arial;
+			text-align: center
 		}
 
 		/* h2 descendants of .section class: set a background color for all h2 text in sections */
 		.section h2 {
-			background-color: rgb(255,255,220);
-			font-family: Georgia;
-			color: maroon;
-		}
-
-		/* #courses id with <a> tag selector:
-			set the hover properties of links within #courses element */
-		#courses a:link {
-			color:rgb(100,0,0) ;
-		}
-		#courses a:hover {
-			color:red;
-		}
-		#courses a:active {
-			color:white;
-		}
-		#courses a:visited {
+			font-family: "Comic Sans MS";
 			color:purple;
 		}
 
-		/* span tag selector: color all span tags red */
-		span {
-			color: red;
-		}
+		.background-image{
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image:  url("https://s.abcnews.com/images/Entertainment/WireAP_cde8050457614df7bd4474c70b068f1e_12x5_992.jpg");
+  
+    /* Set a specific height */
+    height: 50%;
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
 
-		/* span with .serious class: set font to Impact */
-		span.serious {
-			font-family: "Impact";
-		}
+  .ftext {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:rgb(84, 12, 84);
+    font-family: "Comic Sans MS";
+  }
 
-		/* span with .silly class: set font to Comic Sans */
-		span.silly {
-			font-family: "Comic Sans MS";
-		}		
-
-		/* Put the image on the right */
-		#photo { float: right; }
-
-		/* Table Style! */
-		/* Put borders around the cells */
-		th, td { border: solid 1px black; }
-		/* Collapse or 'merge' the borders into each other*/
-		table { border-collapse: collapse; }
-
-		/* Color every other row (tr) light grey */
-		tr:nth-child(even) {
-			background:rgb(220,220,220);
-		}
-
-		/* Color green the text of currentlytaking rows */
-		tr.currentlytaking {
-			color:green;
-		}
-
-		/* Align and style the "For Credit" and "Listener" cells */
-		td.enrollheader {
-			background-color:white;
-			text-align:center;
-			font-weight:bold;
-		}
+  .fortext{
+    text-align: center;
+    position: absolute;
+    top: 70%;  
+    left: 50%; 
+	color:rgb(84, 12, 84);
+    transform: translate(-50%, -50%);
+    font-family: "Comic Sans MS";
+    font-size: 100%;
+  }
 
 	</style>
 
